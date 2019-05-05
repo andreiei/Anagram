@@ -1,0 +1,52 @@
+package andreiei.anagram;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		Path pathToFile = getFilePath("eventyr.txt");
+		
+		List<String> listOfWords = readFile();
+		
+
+		long tt = System.nanoTime();
+
+		new Anagram("eventyr.txt").initiateProgram();
+
+		tt = (System.nanoTime() - tt);
+
+		System.out.println("Nano seconds: " + tt / 1000000.0);
+	}
+	
+	public static Path getFilePath(String filename) {
+		String directory = System.getProperty("user.dir") + "/src/main/resources/" + filename;
+		Path path = FileSystems.getDefault().getPath(directory, filename);
+		
+		return path;
+	}
+	
+	public static ArrayList<String> readFile(Path pathToFile){
+		Path path = getFilePath();
+		Charset charset = Charset.forName("UTF-8");
+
+		ArrayList<String> textList = new ArrayList<String>();
+		try (BufferedReader reader = Files.newBufferedReader(path, charset)) {
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+				textList.add(line.trim());
+			}
+
+		} catch (IOException x) {
+			System.err.format("IOException: %s%n", x);
+		}
+
+		return textList;
+	}
+}

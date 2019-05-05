@@ -1,0 +1,23 @@
+package no;
+
+import java.util.Map;
+import java.util.List;
+
+import java.nio.file.NoSuchFileException;
+
+import static org.junit.Assert.*;
+import static org.junit.AssertThat
+
+import org.junit.Test;
+
+public class AnagramTest {
+
+	@Test
+	public void test() {
+		Anagram a = new Anagram("testFile.txt");
+		a.initiateProgram();
+		
+		Map<String, List<String>> anagramMap = a.getAnagramMap();
+		assertEquals(2, anagramMap.size());
+	}
+}

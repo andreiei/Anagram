@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/Users/andrei/Dropbox/Anagram/.metadata/.plugins/org.eclipse.jdt.core
+1081666706.index
+2585418274.index
+2074130039.index
+1935220753.index
+3375146725.index

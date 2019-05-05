@@ -1,0 +1,67 @@
+package andreiei.anagram;
+
+import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.Before;
+
+import andreiei.anagram.Anagram;
+
+
+public class AnagramTest {
+	private Anagram anagram;
+	
+	@Before
+	public void setup() {
+		anagram = new Anagram("testing.txt");
+	}
+	
+	@Test
+	public void testSortString() {
+		String stringAfterSorting = anagram.sortString("edcba");
+		assertEquals("abcde", stringAfterSorting);
+	}
+	
+	@Test
+	public void testReadFile() {
+		Anagram testFile = new Anagram("testFile.txt");
+		List<String> readStrings = anagram.readFile();
+		
+		assertEquals("ierdna", readStrings.get(0));
+		assertEquals("dada", readStrings.get(1));
+		assertEquals("wo2941", readStrings.get(2));
+		assertEquals("Andrei", readStrings.get(3));
+		assertEquals("dmz", readStrings.get(4));
+		assertEquals("dnaier", readStrings.get(5));
+		assertEquals("hello", readStrings.get(6));
+		assertEquals("olleh", readStrings.get(7));
+	}
+
+	@Test
+	public void testAnagram() {
+		Map<String, List<String>> testmap = new HashMap<String, List<String>>();
+		
+		testmap.put("ehllo", new ArrayList<String>());
+		testmap.get("ehllo").add("hello");
+		testmap.get("ehllo").add("olleh");
+		
+		testmap.put("adeinr", new ArrayList<String>());
+		testmap.get("adeinr").add("ierdna");
+		testmap.get("adeinr").add("andrei");
+		testmap.get("adeinr").add("dnaier");
+		
+		anagram.initiateProgram();
+		Map<String, List<String>> anagramMap = anagram.getAnagramMap();
+		
+		assertEquals(testmap.size(), anagramMap.size());
+		assertThat(anagramMap, is(testmap));
+	}
+}

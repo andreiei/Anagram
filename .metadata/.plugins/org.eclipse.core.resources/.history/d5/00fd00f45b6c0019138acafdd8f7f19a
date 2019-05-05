@@ -1,0 +1,19 @@
+package no;
+
+import java.nio.file.NoSuchFileException;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class AnagramTest {
+
+	@Test
+	public void test() {
+		Anagram a = new Anagram("eventyr.txt");
+		a.initiateProgram();
+		assertEquals(25, 25);
+	}
+	
+
+}

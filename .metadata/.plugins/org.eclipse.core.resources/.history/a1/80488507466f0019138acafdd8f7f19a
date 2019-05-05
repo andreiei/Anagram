@@ -1,0 +1,17 @@
+package andreiei.anagram;
+
+public class Main {
+	public static void main(String[] args){
+		 String filename = "eventyr.txt";
+		 String directory = System.getProperty("user.dir);
+		
+		
+		long tt = System.nanoTime();
+
+		new Anagram("eventyr.txt").initiateProgram();
+
+		tt = (System.nanoTime()-tt);
+
+		System.out.println("Nano seconds: "+tt/1000000.0);
+	}
+}

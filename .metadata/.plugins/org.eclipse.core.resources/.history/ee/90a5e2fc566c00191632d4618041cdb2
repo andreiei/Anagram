@@ -1,0 +1,13 @@
+package java;
+
+public class Main {
+	public static void main(String[] args){
+		long tt = System.nanoTime();
+
+		//new Anagram("eventyr.txt").initiateProgram();
+
+		tt = (System.nanoTime()-tt);
+
+		System.out.println(tt/1000000.0);
+		}
+}

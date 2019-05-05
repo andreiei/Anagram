@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AllTests" project="anagram" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="andreiei.anagram.AllTests" time="0.023">
+    <testsuite name="andreiei.anagram.AnagramTest" time="0.021">
+      <testcase name="testSortString" classname="andreiei.anagram.AnagramTest" time="0.0"/>
+      <testcase name="testAnagram" classname="andreiei.anagram.AnagramTest" time="0.021"/>
+    </testsuite>
+    <testsuite name="andreiei.anagram.MainTest" time="0.002">
+      <testcase name="testReadFile" classname="andreiei.anagram.MainTest" time="0.002"/>
+    </testsuite>
+  </testsuite>
+</testrun>
