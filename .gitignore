@@ -14,5 +14,5 @@ buildNumber.properties
 
 .DS_Store
 
-metadata/
+.metadata/
 .recommenders/
