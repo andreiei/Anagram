@@ -9,6 +9,10 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+*.jar
+*.class
+
 .DS_Store
 
-.metadata
+metadata/
+.recommenders/

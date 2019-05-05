@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="AnagramTest" project="anagram" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="andreiei.anagram.AnagramTest" time="0.0">
-    <testcase name="testSortString" classname="andreiei.anagram.AnagramTest" time="0.0"/>
-    <testcase name="testAnagram" classname="andreiei.anagram.AnagramTest" time="0.0"/>
-    <testcase name="testAnagram2" classname="andreiei.anagram.AnagramTest" time="0.0"/>
-    <testcase name="testRemoveNonAnagramWords" classname="andreiei.anagram.AnagramTest" time="0.0"/>
-  </testsuite>
-</testrun>
